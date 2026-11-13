@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lag-hunter"
+version = "0.1.0"
+description = "Per-hop latency and loss table to one target (system tracert/ping on Windows, traceroute/ping elsewhere) with a heuristic suspect hop"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+lag-hunter = "lag_hunter.cli:main"
+
+[tool.setuptools]
+packages = ["lag_hunter"]

@@ -1,0 +1,12 @@
+
+Pinging 198.51.100.1 with 32 bytes of data:
+Reply from 198.51.100.1: bytes=32 time=9ms TTL=62
+Reply from 198.51.100.1: bytes=32 time=10ms TTL=62
+Request timed out.
+Reply from 198.51.100.1: bytes=32 time<1ms TTL=62
+Reply from 198.51.100.1: Destination host unreachable.
+
+Ping statistics for 198.51.100.1:
+    Packets: Sent = 5, Received = 3, Lost = 2 (40% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 10ms, Average = 6ms

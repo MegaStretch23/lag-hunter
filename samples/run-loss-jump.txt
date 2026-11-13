@@ -1,0 +1,15 @@
+# SYNTHETIC input (tests/make_fixture.py, random.seed(11)); not a real network run
+# command: python3 -m lag_hunter --from-file tests/fixtures/capture_loss_jump_SYNTHETIC.txt
+lag-hunter  target game.example.net
+
+hop  host                           avg ms   max ms  loss %  note
+  1  192.168.1.1                       0.7      1.0       0
+  2  10.20.0.1                         8.1      9.0       0
+  3  198.51.100.1                     10.0     11.0      30  <-- heuristic suspect hop
+  4  *                                   -        -       -  no reply to the trace
+  5  198.51.100.77                    12.0     14.0      40
+  6  203.0.113.9                      12.0     13.0      30
+  7  203.0.113.50                     14.1     16.0      30
+
+Heuristic suspect hop: 3 (198.51.100.1): ping loss rises from 0% to 30% and stays up.
+This is a heuristic on a few pings per hop, not a diagnosis. A router that de-prioritises ICMP can look slow or lossy while forwarding fine.
